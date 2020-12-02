@@ -313,7 +313,7 @@ def main(args):
                         frame_verts,
                         cam=frame_cam,
                         color=mc,
-                        angle=270,
+                        angle=args.view_angle,
                         axis=[0,1,0],
                     )
 
@@ -344,6 +344,9 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    
+    parser.add_argument('--view_angle', type=int,
+                        help='input video render angle or youtube link')
 
     parser.add_argument('--vid_file', type=str,
                         help='input video path or youtube link')
